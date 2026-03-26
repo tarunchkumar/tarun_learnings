@@ -1,0 +1,21 @@
+{
+  "resource": "/phones",
+  "path": "/phones",
+  "httpMethod": "GET",
+  "headers": {
+    "Accept": "application/json",
+    "Host": "api.tata.com",
+    "User-Agent": "Mozilla/5.0..."
+  },
+  "queryStringParameters": {
+    "brand": "apple"
+  },
+  "pathParameters": null,
+  "requestContext": {
+    "stage": "prod",
+    "requestId": "c6af9ac6-7b61-11e6-9a41-93e8deadbeef",
+    "identity": { "sourceIp": "127.0.0.1" }
+  },
+  "body": "{\"note\": \"Please send the soap!\"}",
+  "isBase64Encoded": false
+}
