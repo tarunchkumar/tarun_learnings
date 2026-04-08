@@ -1,0 +1,39 @@
+import time
+import threading
+
+start_time = time.time()
+
+def cal_square(numbers):
+    print("Calculating squares of numbers:")
+    for number in numbers:
+        print(f"The square of {number} is {number**2}")
+        time.sleep(1)
+        
+def cal_cube(numbers):
+    print("Calculating cubes of numbers:")
+    for number in numbers:
+        print(f"The cube of {number} is {number**3}")
+        time.sleep(1)
+        
+numbers = [1,2,3,4,5,6]
+
+# t1 = threading.Thread(target=cal_square, args=(numbers,))
+# t2 = threading.Thread(target=cal_cube, args=(numbers,))
+# t1.start()
+# t2.start()
+
+# t1.join()
+# t2.join()
+cal_square(numbers)
+cal_cube(numbers)
+
+end_time =time.time()
+
+time_diff = end_time - start_time
+print(time_diff)
+
+# Using threads we can run the two functions concurrently, which can significantly reduce the total execution time, especially if the functions involve I/O operations or are computationally intensive. In this example, since both functions have a sleep of 1 second for each number, using threads allows them to run simultaneously, resulting in a much shorter total execution time compared to running them sequentially.
+
+
+
+
